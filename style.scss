@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --yellow: #f5bf23;
+  --black: #111;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #eee;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+//==== LES MIXINS =======
+
+//Model grid
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+}
+
+//Model titre
+@mixin titleText($titleSize) {
+  font-size: $titleSize;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+//Model paragraphe
+@mixin graphText($titleSize) {
+  font-size: $titleSize;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+//Model des icones
+@mixin iconsBox() {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+  }
+}
+
+/* ======= HEADER ========= */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+
+  .logo {
+    @include titleText(2.5rem);
+
+    span {
+      color: var(--yellow);
+    }
+  }
+
+  .navbar a{
+    @include titleText(1.8rem);
+    margin:0 1rem;
+
+    &:hover{
+        color:var(--yellow);
+    }
+  }
+
+  .icons div{
+    @include iconsBox();
+    margin-left: 0.3em;
+  }
+
+  #menu-btn{
+    display: none;
+  }
+}
+
+
+
+
+
+//======== MEDIA QUERY ==========
+@media (max-width:1200px){
+    .header{
+        padding:1.5rem 2rem;
+    }
+}
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        #menu-btn{
+            display: inline-block;
+        }
+
+        .navbar{
+            position: absolute;
+            top: 100%;
+            left:0;
+            right: 0;
+            background: var(--white);
+            border-top: var(--border);
+            border-bottom: var(--border);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); //cache le bloc nav
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            a{
+              display: block;
+              margin: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
