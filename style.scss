@@ -192,7 +192,7 @@ html {
     display: none;
 
     &.active{
-        display: none;
+        display: block;
     }
 
     h3{
@@ -254,7 +254,65 @@ html {
   }
 }
 
+.contact-info{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  width: 35rem;
+  background: var(--white);
+  height: 100%;
+  text-align: center;
+  z-index: 1100;
+  padding: 0 2rem;
+  padding-top: 5rem;
+  display: none;
 
+  &.active{
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+    display: block;
+  }
+
+  #close-contact-info{
+     position: absolute;
+     top: 1rem;
+     right: 1.5rem;
+     cursor: pointer;
+     font-size: 4rem;
+     color: var(--black);
+
+     &:hover{
+      transform: rotate(90deg);
+     }
+  }
+
+  .info{
+    padding: 2rem;
+    i{
+      @include iconsBox();
+      margin-bottom: .5rem;
+    }
+
+    h3{
+      @include titleText(2rem);
+      padding: 1rem 0;
+    }
+
+    p{
+      @include graphText(1.5rem)
+    }
+  }
+
+  .share{
+    padding-top: 1rem;
+    border-top: var(--border);
+    margin-top: 2rem;
+
+    a{
+      @include iconsBox();
+      margin: 0 .3rem;
+    }
+  }
+}
 
 
 
@@ -286,7 +344,7 @@ html {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); //cache le bloc nav
 
             &.active{
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //active le bloc nav
             }
 
             a{
@@ -297,8 +355,24 @@ html {
     }
 }
 
+@media (max-width:768px){
+
+  .header{
+    width: 90%;
+  }
+
+  
+}
 @media (max-width:450px){
     html{
-        font-size: 50%;
+        font-size: 40%;
     }
+    .header{
+      width: 100%;
+
+      .search-form{
+      width: 80%;
+    }
+    }
+    
 }

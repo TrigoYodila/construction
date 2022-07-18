@@ -1,59 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>construction</title>
 
     <!-- Fichier css -->
-    <link rel="stylesheet" href="dist/css/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="dist/css/style.css" />
+  </head>
+  <body>
     <!-- Header section start -->
     <header class="header">
-        <a href="#" class="logo">Les <span>Bâtisseurs</span></a>
+      <a href="#" class="logo">Les <span>Bâtisseurs</span></a>
 
-        <nav class="navbar">
-            <a href="#home">Acceuil</a>
-            <a href="#about">A propos</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projets</a>
-            <a href="#pricing">Tarification</a>
-            <a href="#contact">Contact</a>
-            <a href="#blogs">Blogs</a>
-        </nav>
+      <nav class="navbar">
+        <a href="#home">Acceuil</a>
+        <a href="#about">A propos</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projets</a>
+        <a href="#pricing">Tarification</a>
+        <a href="#contact">Contact</a>
+        <a href="#blogs">Blogs</a>
+      </nav>
 
-        <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="info-btn" class="fas fa-info-circle"></div>
-            <div id="search-btn" class="fas fa-search"></div>
-            <div id="login-btn" class="fas fa-user"></div>
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="info-btn" class="fas fa-info-circle"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="Rechercher ici..."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+
+      <form action="" class="login-form">
+        <h3>login form</h3>
+        <input type="email" placeholder="entrer votre email" class="box" />
+        <input
+          type="password"
+          placeholder="entrer votre mot de passe"
+          class="box"
+        />
+        <div class="flex">
+          <input type="checkbox" name="" id="remember-me" />
+          <label for="remember-me">remember-me </label>
+          <a href="#">Mot de passe oublié ?</a>
         </div>
-        
-        <form action="" class="search-form">
-            <input type="search" name="" placeholder="Rechercher ici..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-
-        <form action="" class="login-form">
-            <h3>login form</h3>
-             <input type="email" placeholder="entrer votre email" class="box">
-             <input type="password" placeholder="entrer votre mot de passe" class="box">
-             <div class="flex">
-                <input type="checkbox" name="" id="remember-me">
-                <label for="remember-me">remember-me </label>
-                <a href="#">Mot de passe oublié ?</a>
-             </div>
-             <input type="submit" value="connectez vous maintenant" class="btn">
-             <p>vous n'avez pas de compte. <a href="#">créer une</a></p>
-        </form>
-
+        <input type="submit" value="connectez vous maintenant" class="btn" />
+        <p>vous n'avez pas de compte. <a href="#">créer une</a></p>
+      </form>
     </header>
 
+    <div class="contact-info">
+        <div id="close-contact-info" class="fas fa-times"></div>
+      <div class="info">
+        <i class="fas fa-phone"></i>
+        <h3>phone number</h3>
+        <p>+123-456-7890</p>
+        <p>+111-222-333</p>
+      </div>
 
-    <script src="https://kit.fontawesome.com/4056f06b22.js" crossorigin="anonymous"></script>
+      <div class="info">
+        <i class="fas fa-envelope"></i>
+        <h3>email number</h3>
+        <p>shaikhanas@gmail.com</p>
+        <p>anasbhai@gmail.com</p>
+      </div>
+
+      <div class="info">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>office adress</h3>
+        <p>Kinshasa, Gombe - 400104</p>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/4056f06b22.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
