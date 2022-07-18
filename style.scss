@@ -38,8 +38,8 @@
 //Model paragraphe
 @mixin graphText($titleSize) {
   font-size: $titleSize;
-  color: var(--black);
-  line-height: 1.5;
+  color: var(--light-color);
+  line-height: 2;
 }
 
 //Model des icones
@@ -78,8 +78,11 @@ html {
   }
 }
 
-.btn{
-  display: inline-block;  
+section {
+  padding: 5rem 10%;
+}
+.btn {
+  display: inline-block;
   margin-top: 1rem;
   padding: 1rem 3rem;
   background: var(--black);
@@ -88,17 +91,17 @@ html {
   font-size: 1.7rem;
   text-transform: capitalize;
 
-  &:hover{
+  &:hover {
     background: var(--yellow);
     color: var(--black);
   }
 }
 
-@keyframes fadeIn{
-    0%{
-        top: 50%;
-        opacity: 0;
-    }
+@keyframes fadeIn {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
 }
 
 /* ======= HEADER ========= */
@@ -113,6 +116,7 @@ html {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  background: var(--white);
 
   .logo {
     @include titleText(2.5rem);
@@ -122,28 +126,28 @@ html {
     }
   }
 
-  .navbar a{
+  .navbar a {
     @include titleText(1.8rem);
-    margin:0 1rem;
+    margin: 0 1rem;
 
-    &:hover{
-        color:var(--yellow);
+    &:hover {
+      color: var(--yellow);
     }
   }
 
-  .icons div{
+  .icons div {
     @include iconsBox();
     margin-left: 0.3em;
   }
 
-  #menu-btn{
+  #menu-btn {
     display: none;
   }
 
-  .search-form{
+  .search-form {
     position: absolute;
     top: 120%;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
     width: 60rem;
     background: var(--white);
@@ -152,111 +156,111 @@ html {
     display: none;
     align-items: center;
     gap: 1rem;
-    animation: fadeIn .2s linear;
+    animation: fadeIn 0.2s linear;
 
-    &.active{
-        display: flex;
+    &.active {
+      display: flex;
     }
 
-    input{
-        width: 100%;
-        padding: 1.2rem 1.4rem;
-        background: var(--light-bg);
-        font-size: 1.6rem;
-        color: var(--light-color);
+    input {
+      width: 100%;
+      padding: 1.2rem 1.4rem;
+      background: var(--light-bg);
+      font-size: 1.6rem;
+      color: var(--light-color);
     }
 
-    label{
-        font-size: 2.5rem;
-        color: var(--black);
-        cursor: pointer;
-        margin: 0 1rem;
+    label {
+      font-size: 2.5rem;
+      color: var(--black);
+      cursor: pointer;
+      margin: 0 1rem;
 
-        &:hover{
-            color: var(--yellow);
-        }
+      &:hover {
+        color: var(--yellow);
+      }
     }
   }
 
-  .login-form{
+  .login-form {
     position: absolute;
     top: 120%;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
     width: 40rem;
     background: var(--white);
     box-shadow: var(--box-shadow);
     padding: 2rem;
     text-align: center;
-    animation: fadeIn .2s linear;
+    animation: fadeIn 0.2s linear;
     display: none;
 
-    &.active{
-        display: block;
+    &.active {
+      display: block;
     }
 
-    h3{
-        @include titleText(2.5rem);
-        padding-bottom: 1rem;
-        text-transform:uppercase;
+    h3 {
+      @include titleText(2.5rem);
+      padding-bottom: 1rem;
+      text-transform: uppercase;
     }
 
-    .box{
-        width: 100%;
-        padding: 1.2rem 1.4rem;
-        background: var(--light-bg);
-        font-size: 1.6rem;
-        color:var(--light-color);
-        margin: .7rem 0;
+    .box {
+      width: 100%;
+      padding: 1.2rem 1.4rem;
+      background: var(--light-bg);
+      font-size: 1.6rem;
+      color: var(--light-color);
+      margin: 0.7rem 0;
     }
 
-    .flex{
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
 
-        label{
-            font-size: 1.5rem;
-            color:var(--light-color);
-            cursor: pointer;
+      label {
+        font-size: 1.5rem;
+        color: var(--light-color);
+        cursor: pointer;
+      }
+
+      a {
+        font-size: 1.5rem;
+        color: var(--light-color);
+        margin-left: auto;
+
+        &:hover {
+          color: var(--yellow);
+          text-decoration: underline;
         }
-
-        a{
-            font-size: 1.5rem;
-            color:var(--light-color);
-            margin-left: auto;
-
-            &:hover{
-                color: var(--yellow);
-                text-decoration: underline;
-            }
-        }
+      }
     }
 
-    .btn{
-        width: 100%;
+    .btn {
+      width: 100%;
     }
 
-    p{
-        @include graphText(1.5rem);
-        padding-top: 1.5rem;
+    p {
+      @include graphText(1.5rem);
+      padding-top: 1.5rem;
 
-        a{
-            color: var(--yellow);
+      a {
+        color: var(--yellow);
 
-            &:hover{
-                text-decoration: underline;
-            } 
+        &:hover {
+          text-decoration: underline;
         }
+      }
     }
   }
 }
 
-.contact-info{
+.contact-info {
   position: fixed;
-  top: 0; 
+  top: 0;
   right: 0;
   width: 35rem;
   background: var(--white);
@@ -267,49 +271,85 @@ html {
   padding-top: 5rem;
   display: none;
 
-  &.active{
+  &.active {
     box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
     display: block;
   }
 
-  #close-contact-info{
-     position: absolute;
-     top: 1rem;
-     right: 1.5rem;
-     cursor: pointer;
-     font-size: 4rem;
-     color: var(--black);
+  #close-contact-info {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 4rem;
+    color: var(--black);
 
-     &:hover{
+    &:hover {
       transform: rotate(90deg);
-     }
+    }
   }
 
-  .info{
+  .info {
     padding: 2rem;
-    i{
+    i {
       @include iconsBox();
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
-    h3{
+    h3 {
       @include titleText(2rem);
       padding: 1rem 0;
     }
 
-    p{
-      @include graphText(1.5rem)
+    p {
+      @include graphText(1.5rem);
     }
   }
 
-  .share{
+  .share {
     padding-top: 1rem;
     border-top: var(--border);
     margin-top: 2rem;
 
-    a{
+    a {
       @include iconsBox();
-      margin: 0 .3rem;
+      margin: 0 0.3rem;
+    }
+  }
+}
+
+.home {
+  padding: 0;
+
+  .slide {
+    min-height: 60rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg,var(--white),transparent);
+    }
+    .content {
+      width: 60rem;
+      position: relative;
+
+      h3{
+        @include titleText(4.5rem);
+        text-transform:uppercase;
+      }
+
+      p{
+        @include graphText(1.6rem);
+        padding: 1rem 0;
+      }
     }
   }
 }
@@ -317,62 +357,69 @@ html {
 
 
 //======== MEDIA QUERY ==========
-@media (max-width:1200px){
-    .header{
-        padding:1.5rem 2rem;
-    }
-}
-
-@media (max-width:991px) {
-    html{
-        font-size: 55%;
-    }
-
-    .header{
-        #menu-btn{
-            display: inline-block;
-        }
-
-        .navbar{
-            position: absolute;
-            top: 100%;
-            left:0;
-            right: 0;
-            background: var(--white);
-            border-top: var(--border);
-            border-bottom: var(--border);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); //cache le bloc nav
-
-            &.active{
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //active le bloc nav
-            }
-
-            a{
-              display: block;
-              margin: 2rem;
-            }
-        }
-    }
-}
-
-@media (max-width:768px){
-
-  .header{
-    width: 90%;
+@media (max-width: 1200px) {
+  .header {
+    padding: 1.5rem 2rem;
   }
 
-  
+  section {
+    padding: 3rem 5%;
+  }
 }
-@media (max-width:450px){
-    html{
-        font-size: 40%;
-    }
-    .header{
-      width: 100%;
 
-      .search-form{
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+
+  .header {
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); //cache le bloc nav
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //active le bloc nav
+      }
+
+      a {
+        display: block;
+        margin: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 90%;
+
+    .login-form {
+      width: 90%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 40%;
+  }
+  .header {
+    width: 100%;
+
+    .search-form {
       width: 80%;
     }
-    }
-    
+  }
 }
