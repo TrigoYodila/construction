@@ -17,7 +17,7 @@
   box-sizing: border-box;
   outline: none;
   text-decoration: none;
-  transition: all 0.2s linear;
+  transition: 0.2s linear;
 }
 
 //==== LES MIXINS =======
@@ -98,6 +98,7 @@ section {
   cursor: pointer;
   font-size: 1.7rem;
   text-transform: capitalize;
+  transition: 0.2s linear;
 
   &:hover {
     background: var(--yellow);
@@ -627,7 +628,7 @@ section {
 
         p{
           padding: 1rem 0;
-          
+
         }
       }
     }
@@ -635,6 +636,53 @@ section {
 }
 
 
+.contact{
+  background: var(--black);
+
+  .heanding{
+    color: var(--white);
+  }
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .map{
+      flex:1 1 41rem;
+      width: 100%;
+    }
+
+    form{
+      flex:1 1 41rem;
+      background: var(--white);
+      padding: 2rem;
+
+      h3{
+        @include titleText(2.5rem);
+      }
+
+      .box{
+        margin: .7rem 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        border: none;
+        border-bottom: var(--border);
+        font-size: 1.6rem;
+        color: var(--light-color);
+
+        &:focus{
+          border-color: var(--yellow);
+        }
+      }
+
+      textarea{
+        height: 15rem;
+        resize: none;
+      }
+    }
+  }
+}
 
 
 
@@ -674,6 +722,7 @@ section {
       border-top: var(--border);
       border-bottom: var(--border);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); //cache le bloc nav
+      transition: 0.2s linear;
 
       &.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //active le bloc nav
