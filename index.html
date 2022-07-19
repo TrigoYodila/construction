@@ -13,6 +13,8 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
   </head>
   <body>
     <!-- Header section start -->
@@ -258,14 +260,101 @@
 </section>
 <!-- services section ends-->
 
+<!-- projects section starts -->
+
+<section class="projects" id="projects">
+  <h1 class="heanding"> our projects</h1>
+
+  <div class="box-container">
+    <a href="images/project-1.jpg" class="box">
+      <div class="image">
+        <img src="images/project-1.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="info">
+          <h3>maison de rêves</h3>
+          <p>construction, decoration</p>
+        </div>
+        <i class="fas fa-plus"></i>
+      </div>
+    </a>
+
+    <a href="images/project-2.jpg" class="box">
+      <div class="image">
+        <img src="images/project-2.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="info">
+          <h3>maison de rêves</h3>
+          <p>construction, decoration</p>
+        </div>
+        <i class="fas fa-plus"></i>
+      </div>
+    </a>
+
+    <a href="images/project-3.jpg" class="box">
+      <div class="image">
+        <img src="images/project-3.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="info">
+          <h3>maison de rêves</h3>
+          <p>construction, decoration</p>
+        </div>
+        <i class="fas fa-plus"></i>
+      </div>
+    </a>
+
+    <a href="images/project-4.jpg" class="box">
+      <div class="image">
+        <img src="images/project-4.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="info">
+          <h3>maison de rêves</h3>
+          <p>construction, decoration</p>
+        </div>
+        <i class="fas fa-plus"></i>
+      </div>
+    </a>
+
+    <a href="images/project-5.jpg" class="box">
+      <div class="image">
+        <img src="images/project-5.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="info">
+          <h3>maison de rêves</h3>
+          <p>construction, decoration</p>
+        </div>
+        <i class="fas fa-plus"></i>
+      </div>
+    </a>
+
+    <a href="images/project-6.jpg" class="box">
+      <div class="image">
+        <img src="images/project-6.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="info">
+          <h3>maison de rêves</h3>
+          <p>construction, decoration</p>
+        </div>
+        <i class="fas fa-plus"></i>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+<!-- projects section ends -->
 
 
 
 
 
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
@@ -274,5 +363,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
+
+    <script>
+      
+      lightGallery(document.querySelector('.projects .box-container'));
+
+    </script>
   </body>
 </html>
