@@ -71,3 +71,21 @@ var swiper = new Swiper(".blogs-slider", {
     },
   },
 });
+
+
+var swiper = new Swiper(".logo-slider", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  breakpoints: {
+    450: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 3,
+    },
+  },
+});

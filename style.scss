@@ -731,6 +731,34 @@ section {
 }
 
 
+.logo-container{
+  text-align: center;
+
+  img{
+    height: 10rem;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+
+.footer{
+  text-align: center;
+
+  .links .btn{
+    margin: .5rem;
+  }
+
+  .credit{
+    @include titleText(2rem);
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    span{
+      color: var(--yellow);
+    }
+  }
+}
 //======== MEDIA QUERY ==========
 @media (max-width: 1200px) {
   .header {
